@@ -9,10 +9,8 @@ const Homepage = () => {
         data:''
     });  
 
-    const APIKEY = process.env.APIKEY;
-
     const dataFetcher = async (movieName) => {
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&query=${movieName}&language=en-US&page=1&include_adult=true`;
+        const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.APIKEY}&query=${movieName}&language=en-US&page=1&include_adult=true`;
         await fetch(url,{method: 'GET'}).then((res) => {(res.json().then(data => {setData({data:data})}));});
     }
 
