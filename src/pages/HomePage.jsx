@@ -10,7 +10,7 @@ const Homepage = () => {
     });  
 
     const dataFetcher = async (movieName) => {
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.APIKEY}&query=${movieName}&language=en-US&page=1&include_adult=true`;
+        const url = `https://api.themoviedb.org/3/search/movie?api_key=ee597d6305b50cbab9620619a5f0cc1c&query=${movieName}&language=en-US&page=1&include_adult=true`;
         await fetch(url,{method: 'GET'}).then((res) => {(res.json().then(data => {setData({data:data})}));});
     }
 
