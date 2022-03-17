@@ -9,7 +9,7 @@ const Homepage = () => {
         data:''
     });  
 
-    const APIKEY = 'ee597d6305b50cbab9620619a5f0cc1c';
+    const APIKEY = process.env.APIKEY;
 
     const dataFetcher = async (movieName) => {
         const url = `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&query=${movieName}&language=en-US&page=1&include_adult=true`;
